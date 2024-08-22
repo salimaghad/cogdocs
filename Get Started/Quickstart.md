@@ -1,0 +1,46 @@
+## Give Devin access to your GitHub
+
+[Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/2ef30e71-3796-4dbe-8ed7-7c7da4704104/Untitled.mp4)
+
+> ⭐ Refer to the following [step-by-step GitHub Integration Guide](https://www.notion.so/GitHub-Integration-Guide-f839572ed60a4d41ae2620c08c2fdb62?pvs=21) for more information.
+> 
+1. Go to [Settings > Integrations](https://preview.devin.ai/settings/integrations) to begin setting up the GitHub integration and click on Connect
+
+1. Select the repo(s) you’d like to integrate, which you can do from the **Settings** page. 
+
+Ensure you are integrating the right GitHub organization with the right Devin account (e.g. if you are connecting your personal repo, your account should say your name ****at the top left of your screen).
+
+![Screenshot 2024-05-21 at 10.47.24 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/7cde3f89-2993-4979-b9a1-f629f6fc4333/Screenshot_2024-05-21_at_10.47.24_PM.png)
+
+1. If you cannot yet integrate your organization’s GitHub, integrate a personal GitHub account.
+
+## Set up your Repo
+
+1. Start any Devin session to install your repo
+    
+    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/283b91c0-88ac-471f-aa4c-beb7992ef168/Untitled.png)
+    
+2. Go to the menu on the top right hand corner of Devin’s Workspace and select **Use Devin’s Machine**. 
+    
+    ![Screenshot 2024-06-10 at 12.11.45 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/6de0e5d1-3f95-4107-80ae-dbef8ef2aaa2/Screenshot_2024-06-10_at_12.11.45_AM.png)
+    
+3. This will open an interactive file editor, complete with a shell. Perform all necessary installation steps in this screen on Devin’s behalf. 
+    
+    ![Screenshot 2024-05-06 at 10.25.02 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/361df258-ed2d-4799-a4ab-37eb5367ccb7/Screenshot_2024-05-06_at_10.25.02_PM.png)
+    
+    ## Create a Machine Snapshot
+    
+    1. Once the installation is complete, go back to the Devin session where you installed the repo  and click the “**Create machine snapshot**” button in the bottom right corner.
+        
+        A [snapshot](https://www.notion.so/Machine-Snapshots-Guide-c987b1c5425642518f583b79acb44954?pvs=21)  allows you to initialize new Devin instances from the snapshotted machine image. This will let you skip the installation steps going forward.
+        
+        ![Screenshot 2024-06-10 at 12.13.34 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/36d86b37-e504-43b9-ab41-3bdf87258fff/09fafdd5-c971-421f-ba65-86849d92ca4d.png)
+        
+    2. Fill out the required information on the Snapshot Creation form. Please note that:
+        1. The snapshot will be shared with all other members of your org. Choose a descriptive name.
+        2. The snapshot description will be used by Devin to understand the contents of the machine image. Devin ‘forgets’ all of context from the original run. As a result, you should mention anything that would be helpful/necessary for future Devins to know!
+        3. `Startup commands` will execute sequentially and automatically when starting from a snapshot.
+    3. [Optional] Consider setting it as your default snapshot. All subsequent runs will automatically start from this snapshot, including runs started on Slack.
+    4. You can now find all your machine snapshots in the top right section before starting a session. Remember to select the machine snapshot you want to use ***before*** starting a new session.
+        
+        ![Screenshot 2024-06-10 at 12.18.21 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/86074484-3b15-4fa4-8795-bf4f888906f4/Screenshot_2024-06-10_at_12.18.21_AM.png)
