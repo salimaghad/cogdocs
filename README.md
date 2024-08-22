@@ -1,8 +1,8 @@
 # Introducing Devin
 
-Devin is an autonomous AI software engineer that can write code, helping software engineering teams on tasks like creating websites, web applications, reviewing and fixing bugs, migrations and more…
+Devin is an autonomous AI software engineer that can write, run and test code, helping software engineers work on personal tasks or their team projects. Devin has helped build websites, web applications, review and fix bugs, support code migrations and even day-to-day assistant tasks like ordering on Amazon or DoorDash!
 
-Here are just some of the use cases the Cognition team and beta users have used Devin for:
+Here are just some of the use cases the Cognition team and Devin's early users have used Devin for:
 
 - Building small applications
 - Building data visualization tools & dashboards
@@ -11,13 +11,12 @@ Here are just some of the use cases the Cognition team and beta users have used 
 - Updating libraries  or dependencies
 - Code navigation
 - Unit & integration tests
-- Many day-to-day assistant tasks like ordering on Amazon, DoorDash, and more
 
 ## Getting Access
 
 If your company is already working with Cognition, you can request permissions with your Administrator or Cognition directly and access Devin via the web application preview.devin.ai.
 
-If you do not have access and your name is already on our waitlist, we do small waitlist releases every week and invite users to join our Technical Preview along with our Slack/Discord community.
+If you do not have access and your name is already on our waitlist, we do small waitlist releases every week and invite users to join our Technical Preview along with our Slack and Discord communities.
 
 ## General Product Features
 
@@ -36,16 +35,6 @@ In Devin’s Workspace, you’ll find:
 
 ![Screenshot 2024-06-09 at 9.16.10 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/30556b54-d6f9-45ac-aa83-f71cb89fa81f/Screenshot_2024-06-09_at_9.16.10_PM.png)
 
-### Product Features
-
-There are several feature highlights that make working with Devin super easy!
-
-- **Playbooks**: A playbook is like a custom system prompt. It’s also like writing a program, without the rigid syntax. Playbooks allow you to be prescriptive and detailed when giving Devin instructions.
-- **Machine Snapshots**: Machine snapshots are ‘save’ states for Devin. After you take a snapshot, you can start from that machine state on any future Devin run.
-- **VSCode:** Read and edit files on Devin’s machine just like if you were working with Devin in VSCode, or open up a terminal to get full access to Devin’s machine.
-
-We also have integrations with Slack and Github, and plan to have many more with your preferred dev tools. You can find more information on all these features and integrations in our [Product Guides](https://www.notion.so/Product-Guides-4a47d7181e1d4533b996b8d574c13b23?pvs=21) section.
-
 ## Demo
 
 https://www.youtube.com/watch?v=fjHtjT7GO1c
@@ -56,15 +45,14 @@ Devin is an early product and has lots to learn. The Cognition team is working h
 
 As you use Devin, keep in mind tasks that will be harder for it to execute successfully:
 
-- **Large-scale challenges:** Devin generally performs better on smaller-scoped tasks and single file rather than multi-file edits.
-    - For more complex edits, we highly suggest using **playbooks**.
+- **Large-scale challenges:** Devin generally performs better on smaller-scoped tasks and single file rather than multi-file edits. For more complex edits, we highly suggest using **playbooks** or breaking up the project into smaller, isolated tasks that you can run in separate sessions that build on each other.
 - **Consistency and reliability:** Devin will sometimes get off-track. Sometimes you’ll be able to nudge Devin back on track, other times you may want to restart the run.
 - **UI-related aesthetics:** Devin can build functional frontends, but will need your help with aesthetics.
-- **Security:** This is top priority at Cognition, but we ask all users to exercise caution when sharing credentials with Devin or granting access to specific platforms.
+- **Security:** This is top priority at Cognition, but we ask all users to exercise caution when sharing credentials with Devin or granting access to specific platforms. Any time you are sharing credentials with Devin, make sure you use the Secrets Manager or via the secure credential-sharing channel provided by Devin in the chat if the credentials aren't already available in the Secrets Manager.
 
 ## Feedback
 
-We’re learning and our customers’ input is crucial! If you are part of the Technical Preview, please reach out via our Slack Community. For all other customers and partners you can share your feedback to support@cognition.ai.
+We’re learning and our customers’ input is crucial! If you are part of the Technical Preview, please reach out via our Slack Community. For all other customers and partners you can share your feedback to support@cognition.ai or directly in the web app.
 
 We log all feedback provided by customers and use it to make quick improvements to Devin, inform our product priorities and roadmap.
 
