@@ -15,15 +15,11 @@ Here are just some of the use cases the Cognition team and beta users have used 
 
 ## Getting Access
 
----
-
 If your company is already working with Cognition, you can request permissions with your Administrator or Cognition directly and access Devin via the web application preview.devin.ai.
 
 If you do not have access and your name is already on our waitlist, we do small waitlist releases every week and invite users to join our Technical Preview along with our Slack/Discord community.
 
 ## General Product Features
-
----
 
 ### The Devin Interface
 
@@ -52,13 +48,9 @@ We also have integrations with Slack and Github, and plan to have many more with
 
 ## Demo
 
----
-
 https://www.youtube.com/watch?v=fjHtjT7GO1c
 
 ## Limitations
-
----
 
 Devin is an early product and has lots to learn. The Cognition team is working hard to improve Devin’s breadth of capabilities. 
 
@@ -72,15 +64,11 @@ As you use Devin, keep in mind tasks that will be harder for it to execute succe
 
 ## Feedback
 
----
-
 We’re learning and our customers’ input is crucial! If you are part of the Technical Preview, please reach out via our Slack Community. For all other customers and partners you can share your feedback to support@cognition.ai.
 
 We log all feedback provided by customers and use it to make quick improvements to Devin, inform our product priorities and roadmap.
 
 ## About Cognition
-
----
 
 We are an applied AI lab building end-to-end software agents.
 
