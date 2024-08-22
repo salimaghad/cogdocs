@@ -1,0 +1,222 @@
+This guide will give some inspiration to start working with Devin. Start with Devin sessions that are **smaller in scope**, **well-documented**, **easily verifiable** and ****that have **a quick feedback loop**.
+
+## 🏃 Start a run with Devin
+
+---
+
+We’ve seen folks build voice transcription apps, fine-tuned LLM apps, data analysis apps, scraping apps and more. Building web apps are a great way to start getting to know Devin.
+
+Get creative!
+
+**🎉 Devin builds a celebratory confetti web app** 
+
+```python
+write a vanillajs webapp that, when i click a button "Celebrate", makes confetti rain down the screen. call it "Devin's Party Page"
+```
+
+Link to the session: [Devin’s Confetti Webapp](https://preview.devin.ai/devin/ff88b2e131ae4ce48c055d2bc435a838)
+
+Webapp: https://animated-frangollo-1fbb37.netlify.app/
+
+📈 **Devin self-hosts Redash**
+
+```python
+please self host redash server, connect a local sqlite database. add some dummy data and create an example query & dashboard.
+```
+
+Link to the session: [Self-host redash server](https://preview.devin.ai/sessions/675a54a158024b35a0feb8a159ed8273)
+
+🖥️ **Set up [nfoert/cardie](https://github.com/nfoert/cardie) for local development and testing**
+
+```python
+Get [**https://github.com/nfoert/cardie**](https://github.com/nfoert/cardie) set up and running
+```
+
+Link to the session: [Set up nfoert/cardie repository](https://preview.devin.ai/sessions/4d85f7893df3479b9be50ec458cc9684)
+
+💡 Here are many more example tasks Devin has worked on for our users.
+
+---
+
+📔 **Host + pre-populate a jupyter notebook**
+
+Example Session: [Netlix Shows/Movies by Country](https://preview.devin.ai/devin/4f803558dc1e45ddb489fb93848015ae)
+
+Example Session: [Average California Real Estate Price by City](https://preview.devin.ai/devin/8ee352ce5bdb46fa8b345d7b8db5e1c6)
+
+```python
+Playbook: Translate Python Notebook to Script
+
+## Overview
+Translate a python notebook into a script that takes CLI arguments and writes artifacts.
+
+## What’s Needed From User
+- Provide a python notebook as an attachment
+- Optionally provide specific values for the CLI arguments
+
+## Procedure
+1. Install all the libraries mentioned in the notebook.
+2. Create a new Python script file.
+3. Import the `argparse` library in addition to the mentioned libraries to take the command-line arguments.
+4. Break down the notebook code cells into Python functions
+- For each cell containing executable code, create a corresponding Python function (if not already present and if needed).
+5. Setup the argument parser
+- Find any hard coded variables in the notebook that can serve as the arguments to the script.
+6. Write the main part of the code
+- Call the previously defined functions with the necessary arguments where needed.
+7. Verify the script's functionality and correctness, and correct mistakes as needed.
+- Run the script with arguments
+- Open the script in your editor to verify its contents
+8. Run the script with specific CLI arguments.
+- If the user has provided specific values for the CLI arguments, use those
+9. Share the final script to the user as an attachment
+10. Share any images of any generated plots or results from running the script
+- Try the `savefig` option to save any inline visualisations in a file
+11. Share a summary of the results when you ran the script with CLI arguments
+
+## Specification
+- The script must maintain all the functionality of the notebook
+
+## Advice and Pointers
+1. Try to review the Python notebook and understand the logic within each code cell.
+2. Ensure that the functions you are creating take the necessary arguments and returns the required outputs.
+3. Try the `savefig` option to save the inline visualisations in a file
+```
+
+**🕸️ Create a gource visualization for any repository**
+
+Example Session: [Pytorch visualization](https://preview.devin.ai/devin/8fe32e3a349a4842b2d787e5ccac931b)
+
+Example Session: [Drawdb visualization](https://preview.devin.ai/devin/d98c5e3b4bef43c88b395a0862c36d76)
+
+```python
+## Overview
+Given a link to a github repository, use Gource to visualise the git history.
+
+## What’s Needed From User
+- Provide a link to a github repository
+
+## Procedure
+1. Install dependencies
+    - Install Gource on your machine using `sudo apt install gource`
+    - Install `ffmpeg` and `xvfb` on the machine.
+    - Set up `xvfb` using `ps aux | grep Xvfb`
+2. Clone the git repository locally on your machine.
+    - Navigate to the root directory of the Git repository.
+3. Get the total days of commits -
+    - Get the start date of the first commit using :
+     `git log --pretty='format:%cd' --date='format:%Y-%m-%d' | tail -1`
+    - Get the end date of the latest commit using :
+     `git log --pretty='format:%cd' --date='format:%Y-%m-%d' | head -1`
+    - Calculate the total number of days
+4. Choose the right parameters -
+    - Considering the default duration to be 60 seconds, calculate the speedup factor using - 60/(total number of days).
+    - Set the parameter `--seconds-per-day` and `--auto-skip-seconds` to the calculated speedup factor.
+    - Hide elements using `--hide dirnames,filenames`
+    - Set `<filename>` to the name of the git repository.
+    - Set the parameter `--output-ppm-stream` to `<filename>.ppm`
+5. Run gource with all the parameters.
+    - Use xvfb to run gource
+      `xvfb-run --auto-servernum --server-num=1 gource ...`
+6. Generate a .webm file -
+    - Run the following command
+      `ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i <filename>.ppm -vcodec libvpx -b 10000K <filename>.webm`
+7. Output:
+    - Send the video file as an attachment using the messaging interface to the browser.
+
+## Advice and Pointers
+1. Adjust the frame rate and resolution to balance video quality and file size.
+2. There is no need to authenticate the GitHub CLI on the machine.
+3. Make sure the .ppm file is properly generated for all the commits.
+```
+
+**➰ Convert any jupyter notebook to a script**
+
+Example Session: [Audio waveform and spectrogram](https://preview.devin.ai/devin/bb9ff93037ed4d5f9690099e5269f285)
+
+Example Session: [Decaptcha](https://preview.devin.ai/devin/a725564c943e4974ae2df16e54b14a5d)
+
+Example Session: [Visualizing Data Series with Color Gradients](https://preview.devin.ai/devin/ce43eb22d1aa48c594b1fd8915ed5130)
+
+Example Session: [Optimizing Gambling Strategies](https://preview.devin.ai/devin/453af5136fea4500a8e3956e2644a8a8)
+
+```docker
+Playbook: Translate Python Notebook to Script
+
+## Overview
+Translate a python notebook into a script that takes CLI arguments and writes artifacts.
+
+## What’s Needed From User
+- Provide a python notebook as an attachment
+- Optionally provide specific values for the CLI arguments
+
+## Procedure
+1. Install all the libraries mentioned in the notebook.
+2. Create a new Python script file.
+3. Import the `argparse` library in addition to the mentioned libraries to take the command-line arguments.
+4. Break down the notebook code cells into Python functions
+- For each cell containing executable code, create a corresponding Python function (if not already present and if needed).
+5. Setup the argument parser
+- Find any hard coded variables in the notebook that can serve as the arguments to the script.
+6. Write the main part of the code
+- Call the previously defined functions with the necessary arguments where needed.
+7. Verify the script's functionality and correctness, and correct mistakes as needed.
+- Run the script with arguments
+- Open the script in your editor to verify its contents
+8. Run the script with specific CLI arguments.
+- If the user has provided specific values for the CLI arguments, use those
+9. Share the final script to the user as an attachment
+10. Share any images of any generated plots or results from running the script
+- Try the `savefig` option to save any inline visualisations in a file
+11. Share a summary of the results when you ran the script with CLI arguments
+
+## Specification
+- The script must maintain all the functionality of the notebook
+
+## Advice and Pointers
+1. Try to review the Python notebook and understand the logic within each code cell.
+2. Ensure that the functions you are creating take the necessary arguments and returns the required outputs.
+3. Try the `savefig` option to save the inline visualisations in a file
+```
+
+**🍔 Place an order on DoorDash**
+
+Example Session: [Order an acai bowl](https://preview.devin.ai/devin/5893f431e6af4b19b1cb3fa6efbafc14) 
+
+```python
+## Overview
+The task is to order items, such as food, on DoorDash. You should access your DoorDash account, search the requested restaurant or item to order, select the items for the order, and confirm the order with the user who started the session.
+
+## Procedure
+1. Go to doordash.com 
+2. Search for the food or restaurant requested by the user
+3. If the user requested to order food
+	3.1 Select the 3 most highly rated options within the delivery radius
+	3.2 Share the food options and name of the restaurant with the user
+	3.3 Ask them to confirm their selection
+4. If the user requested to order from a specific restaurant
+	4.1 Select the restaurant closest to the default delivery location
+	4.2 If the restaurant requested is not within the delivery zone of the default delivery address, let the user know and ask for an alternative restaurant 
+5. Before ordering, check that the restaurant is open and delivers to the default delivery address on the DoorDash account
+6. Select the item or items requested by the users
+7. If the item(s) asks for additional required selections, share the options with the user and ask them to decide
+8. If the item(s) offers optional add-ons, share a screenshot of those options with the user and ask them if they’d like to add anything else to their order
+9. Add the order to cart once the user confirmed the selection
+10. By default, select a 20% tip
+11. Go to cart and request confirmation on the ordered items, total price and delivery address from the user
+12. Once the user confirms the price, order and address, complete the order
+13. Once ordered, confirm the order has been placed with the user and share an estimated delivery time
+
+## Specifications
+- You must see the order confirmation page and have an estimated delivery time in order to complete the task
+
+## Forbidden Actions
+- You cannot complete the order without receiving explicit confirmation from the user
+- You may not add items to the order that haven’t been requested by the user
+- You may not modify or remove items from the order unless the user specifically requests it 
+
+## Advice and Pointers
+- You are already signed into your account on DoorDash (via cookies). If not, you can use the DoorDash cookies saved in Secrets.
+- Do NOT ask clarifying questions until you perform at least one search for a relevant item.
+
+```
