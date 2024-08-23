@@ -1,1 +1,130 @@
+---
+title: "Integrations"
+description: "Work with Devin in your favorite tools and applications"
+---
 
+## Slack 
+
+Once you’ve connected Slack to your organization, you’ll be able to initialize Devin via Slack just by tagging **@Devin**. Devin responds in-thread with updates and questions, just as in the regular chat interface. 
+
+
+### Slack Organization Integration
+
+1. In the **Integrations** tab on your [Settings](https://preview.devin.ai/settings/integrations) page, click the “Connect” button to integrate your organization with the Devin Slack app.  You have to be a Slack Admin to set up this integration.
+    
+    ![Screenshot 2024-06-10 at 12.23.00 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/b5f66c26-53cb-4ded-b7f5-baf6fd88d4e7/Screenshot_2024-06-10_at_12.23.00_AM.png)
+    
+2. Once you’ve completed the flow, ensure that your status has updated to look like this.
+    
+    ![Screenshot 2024-06-10 at 12.27.16 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/effc3974-6e6a-4c98-9b4f-0b060bc359c1/Screenshot_2024-06-10_at_12.27.16_AM.png)
+    
+
+### Slack User Integration
+
+Individual users can set up their Slack “Connected User”  at https://preview.devin.ai/settings/integrations
+
+This is not required, but once set up:
+
+1. Users will be able to use the “send to channel” feature, which mirrors sessions started via the web app on Slack. This enables anyone in the channel (with Devin access) to quickly follow along and collaborate with Devin.
+    1. both Devin and the user need to be added to the same Slack channels for this feature to show up!
+    
+    ![Screenshot 2024-07-04 at 8.38.44 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/d0e92779-d764-4783-b0a1-cf0d94188122/Screenshot_2024-07-04_at_8.38.44_PM.png)
+    
+2.  Devin sessions started via Slack will show up with the proper Creator name, rather than “Slack User”.
+
+Once your integration is complete, your interface should look like this: 
+
+![Screenshot 2024-06-10 at 12.27.49 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/a33edef7-317c-4c39-951c-d4ff8e517b73/Screenshot_2024-06-10_at_12.27.49_AM.png)
+
+> Note: If your user account is not properly connecting, ensure that your Slack email is the same as your email in https://preview.devin.ai/settings. If not, please authenticate the correct email on Slack.
+> 
+
+### How to use Devin from Slack
+
+Once you’ve installed the Devin Slack integration, simply trigger Devin with @Devin in any channel. You may include attachments to your message.
+
+![Screenshot 2024-04-22 at 4.28.54 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/0215f163-eea3-481c-8cf9-96a06444eb84/Screenshot_2024-04-22_at_4.28.54_PM.png)
+
+Devin will respond in-thread to your session. Now, you can communicate back and forth as you would in the regular chat interface.
+
+![Screenshot 2024-04-22 at 4.28.01 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/298c4822-16aa-4dff-ae58-02e6b84dd6b7/Screenshot_2024-04-22_at_4.28.01_PM.png)
+
+As usual, sessions without any response for 24 hours will automatically expire.
+
+### Inline Slack Keywords & Functions
+
+`mute` → prevents Devin from sending further Slack messages.
+
+`unmute` → reverses the above.
+
+`(aside)` → causes Devin to ignore the message (useful for commenting on Devin’s run directly in-thread)
+
+`EXIT` → ends the session.
+
+`snapshot:<snapshot name>` → Use a particular snapshot with your run
+
+`playbook:<playbook-name>` → Use a particular playbook with your run
+
+### Turn on Slack Notifications
+
+You can enable Slack notifications for specific runs and Devin will privately message you whenever there’s a status update. To do so, simply click the Slack icon at the top of any run you’d like to be notified for.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/dfee4719-2530-4a72-98fc-8209d01620bb/Untitled.png)
+
+### Dedicated Devin channel
+
+We recommend setting up an specific channel (e.g. **#devin-runs**) to keep all of your Devin requests in one location.
+
+![Screenshot 2024-04-22 at 4.22.54 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/e69b08b6-16b3-4d45-af92-02a5dcade231/Screenshot_2024-04-22_at_4.22.54_PM.png)
+
+### Permissions
+
+The Devin Slackbot requires the following permissions
+
+- `chat:write, chat:write.customize`:
+    
+    Send messages as @Devin or using a customized username and avatar
+    
+    **Reason for request**: Devin has to be able to respond to user requests
+    
+- `commands`:
+    
+    Add shortcuts and/or slash commands that people can use
+    
+    **Reason for request**: Devin might gain more interactive features in the future that will require different commands
+    
+- `files:read. files:write`:
+    
+    Upload, edit, and delete files as Devin
+    
+    **Reason for request**: Devin needs to ability to manage files in order to send and receive attachments to/from the user
+    
+- `channels:history, groups:history, im:history`:
+    
+    View messages and other content in channels, groups, and DMs that Devin is in
+    
+    **Reason for request**: Devin has to access historical messages when he is launched inside of a message thread in order to retrieve the previous messages in the thread as context
+    
+- `im:read`, `im:write`:
+    
+    Start direct messages with people and view basic information about direct messages that Devin has been added to
+    
+    **Reason for request**: Devin needs to be able to initiate DMs in order to send users notifications via Slack
+    
+- `reactions:write`:
+    
+    Add and edit emoji reactions
+    
+    **Reason for request**: Devin adds emojis to messages in order to mark runs as completed or failed
+    
+- `remote_files:read, remote_files:write`:
+    
+    View remote files added by the app in a workspace
+    
+    **Reason for request**: Devin needs to ability to manage remote files in order to send and receive attachments to/from the user
+    
+- `users:read, users:read.email`, `users.profile:read`:
+    
+    View people in a workspace as well as their emails and profiles
+    
+    **Reason for request**: Devin needs to be able to match Slack users with Devin users based on their email address
