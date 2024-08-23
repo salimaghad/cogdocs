@@ -55,34 +55,34 @@
     {
       "group": "Learn about Devin",
       "pages": [
-        "learn-about-devin/prompting"
+        "Learn about Devin/prompting"
       ]
     },
     {
       "group": "Onboard Devin",
       "pages": [
-        "onboard-devin/knowledge",
-        "onboard-devin/snapshots",
-        "onboard-devin/secrets"
+        "Onboard Devin/knowledge",
+        "Onboard Devin/snapshots",
+        "Onboard Devin/secrets"
       ]
     },
     {
       "group": "Collaborate with Devin",
       "pages": [
-        "collaborate-with-devin/machine",
-        "collaborate-with-devin/browser",
-        "collaborate-with-devin/worklog"
+        "Collaborate with Devin/machine",
+        "Collaborate with Devin/browser",
+        "Collaborate with Devin/worklog"
       ]
     },
     {
       "group": "Working with Teams",
       "pages": [
-        "working-with-teams/multidevin",
-        "working-with-teams/playbooks-intro",
-        "working-with-teams/writing-playbooks",
-        "working-with-teams/using-playbooks",
-        "working-with-teams/integrations",
-        "working-with-teams/invited-team"
+        "Working with Teams/multidevin",
+        "Working with Teams/playbooks-intro",
+        "Working with Teams/writing-playbooks",
+        "Working with Teams/using-playbooks",
+        "Working with Teams/integrations",
+        "Working with Teams/invited-team"
       ]
     },
     {
