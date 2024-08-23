@@ -1,3 +1,5 @@
+# Interacting with Devin's Machine
+
 Have you ever wanted to work ***with*** Devin?
 
 You are now able to use and interact with editor and shell! This let's you read and edit files on Devin’s machine just like if you were working with Devin in VSCode. You can also open up a terminal, which means you have **full access** to Devin’s machine.
