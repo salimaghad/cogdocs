@@ -1,1 +1,13 @@
+# Devin's Work Log
 
+You can now easily track and review what Devin’s accomplished with the Work Log in the Planner tab! In Devin’s workspace, go to the Planner and click each step to read Devin’s retro of its work.
+
+Devin will list all the planner steps taken so far, provide a description of the actions taken, and provide a 🟢/ 🟠 / 🔴 grade for each step (corresponding to A/B/C grades). You’ll also find timestamps and how long Devin spent on each step.
+
+[Screen Recording 2024-07-12 at 4.34.03 PM.mov](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/a40fc0ec-9998-46d1-9ccd-1dd4f936e8e0/Screen_Recording_2024-07-12_at_4.34.03_PM.mov)
+
+### Use the Work Log to:
+
+- Get more information on Devin’s actions.
+- Debug and understand which parts of the task went wrong. Helpful for iterating on longer-scoped tasks and/or playbooks!
+- Understand where Devin is spending the majority of its time. Helpful when optimizing tasks that Devin will repeat.
