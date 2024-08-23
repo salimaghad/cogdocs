@@ -1,1 +1,109 @@
 
+## 🏎️ TL;DR Why integrate Devin into GitHub?
+
+---
+
+Integrating Devin into your GitHub organization allows Devin to access and submit pull requests to your existing repositories. Unlike the web application, this lets Devin be a true collaborator on your team.
+
+**The setup is easy!** Go to [preview.devin.ai](http://preview.devin.ai) > **Settings** > **Integrations**, Connect your GitHub and follow the GitHub app integration steps on the screen.
+
+- Make sure to select access to the relevant repos and review permissions
+- Once the set up is done, you should be able to view all your repos in your Devin application.
+
+## 🔗  Setting up the Integration
+
+---
+
+1. In your Devin account at [preview.devin.ai](http://preview.devin.ai), go to [Settings](https://preview.devin.ai/settings/integrations) > **Integrations**, click the “Connect” button to integrate your organization with the Devin GitHub app.
+    
+    ![Screenshot 2024-06-10 at 12.23.00 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/b5f66c26-53cb-4ded-b7f5-baf6fd88d4e7/Screenshot_2024-06-10_at_12.23.00_AM.png)
+    
+
+1. This will redirect you to GitHub where you can select the **GitHub account** and **repositories** to connect Devin, and review the relevant permissions. 
+    1. If you’re setting up the GitHub integration on behalf of your organization make sure to select your company’s account. Note that you will not be able to set up a simultaneous personal Devin <> GitHub integration.
+
+![Screenshot 2024-05-02 at 8.45.25 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/e6d6abc8-d48c-4c73-8a90-fd56d0de9c1d/Screenshot_2024-05-02_at_8.45.25_PM.png)
+
+![Screenshot 2024-05-02 at 8.45.05 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/e5dc45f1-89cb-4680-93d4-6dfda0c667e8/Screenshot_2024-05-02_at_8.45.05_PM.png)
+
+1. Once you’ve completed all the set up steps in Github, you will be directed to the Devin account settings page where you can confirm the integration is set up. 
+    
+    ![Screenshot 2024-06-10 at 12.23.35 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/1c4e0b74-2c32-4a6e-a146-dce155fe7602/Screenshot_2024-06-10_at_12.23.35_AM.png)
+    
+
+1. **[For Enterprise customers only]** Add the `cognition-team` GitHub account to the relevant repositories. This gives us the ability to help onboard Devin onto your codebase and monitor Devin’s activity.
+
+<aside>
+⚠️  We recommend enabling branch protections on master to ensure checks are enforced before Devin can merge any changes.
+
+</aside>
+
+## 🧑‍💻 Using Devin with the GitHub Integration
+
+---
+
+Once the integration is set up, you can go to the Devin web application and you should be able to see all the connected repositories on the right-hand side. 
+
+You can now start running a session and Devin should be able to access your connected GitHub repositories!
+
+![Screenshot 2024-05-02 at 9.47.04 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/1ed9f831-67da-485d-b7f2-540345f60820/fd6eedc6-8c97-45d9-a72f-561a765d3b68.png)
+
+## 🔒 Setting Devin’s Permissions
+
+---
+
+### Managing Permissions
+
+When setting up the integration, the user can choose to grant permissions such that Devin can access **all the organization's repositories or only a selected subset of repos** as determined during the GitHub installation process. 
+
+Permissions are set when you install the GitHub Devin app, and can always be adjusted through the App Settings in the GitHub account once the app is connected.
+
+![Screenshot 2024-05-02 at 9.27.48 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/c28f2691-ca90-4b1b-aa39-314a56d2fd4b/Screenshot_2024-05-02_at_9.27.48_PM.png)
+
+Devin requires the following permissions
+
+- **Read** access to
+    - `dependabot alerts`: Allows Devin to resolve dependabot alerts on your behalf (i.e. bumping dependency versions)
+    - `actions`: Allows Devin to view the actions configured for a repository in order to understand if Devin’s changes pass CI
+    - `checks`: Allows Devin to view the checks configured for a repository in order to understand if Devin’s changes pass CI
+    - `commit statuses`: Allow Devin to view if a commit passes CI
+    - `deployments`: Allow Devin to view which versions of a repository were deployed
+    - `metadata`: Allow Devin to view crucial metadata about a repository such as who owns it
+    - `packages`: Allow Devin to view which versions of a repository were shipped as a package
+    - `pages`: Allow Devin to consult pages associated with a repository, e.g. to view documentation
+    - `repository advisories`: Allow Devin to view security advisories related to a repo in order to help fix security issues
+    - `repository hooks`: Allow Devin to view the hooks configured for a repository, e.g. linting and type checking
+    - `repository projects`: Allow Devin to view projects associated with a repository, e.g. to retrieve information about a task
+- **Read** and **write** access to
+    - `code`: Allow Devin to contribute to the codebase
+    - `discussions`: Allow Devin to contribute to discussions
+    - `issues`: Allow Devin to open new issues
+    - `pull requests`: Allow Devin to create new PRs
+    - `workflows`: Allow Devin to set up new workflows, e.g. to help configure CI/CD
+
+We request these permissions so that Devin can work in your repository just as a regular contributor. Specifically, we permit Devin to push new branches, open PRs, and contribute to PR discussions, which is essential for Devin to productively contribute to your codebase.
+
+### Security Considerations
+
+Some additional information regarding Devin’s permissions in GitHub:
+
+- We recommend enabling branch protections on master to ensure checks are enforced before Devin can merge any changes.
+- If Devin is connected to your organization’s GitHub account then it will have the same permissions for any user with access to the GitHub and Devin organizations.
+- Devin will not mirror the permissions of the user running a session with Devin, it will retain the permissions granted at the org-level.
+- Devin cannot create new repos in your GitHub account.
+
+## ❓GitHub Integration FAQs
+
+---
+
+- **Q: Can I connect my Personal GitHub account to my organization’s Devin account?**
+    
+    Yes, a user can choose to connect a GitHub Organization or Personal account to their organization's Devin account, but we recommend connecting the account that will have the relevant permissions for Devin to run sessions for the organization.
+    
+- **Q: How does the GitHub app handle user authentication?**
+    
+    Only users authenticated with access/permissions to the organization that the GitHub integration was connected to can use it in their Devin runs. In other words, Devin(s) will only have access to a GitHub integration if they are launched by the people part of the organizations that installed that GitHub integration.
+    
+- **Q: How does Devin manage and rotate encryption keys?**
+    
+    Encryption keys are managed by AWS KMS and rotated periodically.
