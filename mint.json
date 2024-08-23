@@ -78,7 +78,7 @@
       "group": "Integrations",
       "pages": [
         "Integrations/devin-tools",
-        "Integrations/github",
+        "Integrations/github-int",
         "Integrations/slack"
       ]
     },
