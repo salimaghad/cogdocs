@@ -1,7 +1,11 @@
-
-## 🏎️ TL;DR Why integrate Devin into GitHub?
-
 ---
+title: "GitHub Integration Guide"
+description: "Work with Devin in your favorite tools and applications"
+icon: 'github'
+---
+
+
+## Why integrate Devin into GitHub?
 
 Integrating Devin into your GitHub organization allows Devin to access and submit pull requests to your existing repositories. Unlike the web application, this lets Devin be a true collaborator on your team.
 
@@ -10,37 +14,33 @@ Integrating Devin into your GitHub organization allows Devin to access and submi
 - Make sure to select access to the relevant repos and review permissions
 - Once the set up is done, you should be able to view all your repos in your Devin application.
 
-## 🔗  Setting up the Integration
-
----
+## Setting up the Integration
 
 1. In your Devin account at [preview.devin.ai](http://preview.devin.ai), go to [Settings](https://preview.devin.ai/settings/integrations) > **Integrations**, click the “Connect” button to integrate your organization with the Devin GitHub app.
     
     ![Screenshot 2024-06-10 at 12.23.00 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/b5f66c26-53cb-4ded-b7f5-baf6fd88d4e7/Screenshot_2024-06-10_at_12.23.00_AM.png)
     
 
-1. This will redirect you to GitHub where you can select the **GitHub account** and **repositories** to connect Devin, and review the relevant permissions. 
+2. This will redirect you to GitHub where you can select the **GitHub account** and **repositories** to connect Devin, and review the relevant permissions. 
     1. If you’re setting up the GitHub integration on behalf of your organization make sure to select your company’s account. Note that you will not be able to set up a simultaneous personal Devin <> GitHub integration.
 
 ![Screenshot 2024-05-02 at 8.45.25 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/e6d6abc8-d48c-4c73-8a90-fd56d0de9c1d/Screenshot_2024-05-02_at_8.45.25_PM.png)
 
 ![Screenshot 2024-05-02 at 8.45.05 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/e5dc45f1-89cb-4680-93d4-6dfda0c667e8/Screenshot_2024-05-02_at_8.45.05_PM.png)
 
-1. Once you’ve completed all the set up steps in Github, you will be directed to the Devin account settings page where you can confirm the integration is set up. 
+3. Once you’ve completed all the set up steps in Github, you will be directed to the Devin account settings page where you can confirm the integration is set up. 
     
     ![Screenshot 2024-06-10 at 12.23.35 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/1c4e0b74-2c32-4a6e-a146-dce155fe7602/Screenshot_2024-06-10_at_12.23.35_AM.png)
     
 
-1. **[For Enterprise customers only]** Add the `cognition-team` GitHub account to the relevant repositories. This gives us the ability to help onboard Devin onto your codebase and monitor Devin’s activity.
+4. **[For Enterprise customers only]** Add the `cognition-team` GitHub account to the relevant repositories. This gives us the ability to help onboard Devin onto your codebase and monitor Devin’s activity.
 
 <aside>
 ⚠️  We recommend enabling branch protections on master to ensure checks are enforced before Devin can merge any changes.
 
 </aside>
 
-## 🧑‍💻 Using Devin with the GitHub Integration
-
----
+## Using Devin with the GitHub Integration
 
 Once the integration is set up, you can go to the Devin web application and you should be able to see all the connected repositories on the right-hand side. 
 
@@ -48,9 +48,7 @@ You can now start running a session and Devin should be able to access your conn
 
 ![Screenshot 2024-05-02 at 9.47.04 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/1ed9f831-67da-485d-b7f2-540345f60820/fd6eedc6-8c97-45d9-a72f-561a765d3b68.png)
 
-## 🔒 Setting Devin’s Permissions
-
----
+## Setting Devin’s Permissions
 
 ### Managing Permissions
 
@@ -92,18 +90,19 @@ Some additional information regarding Devin’s permissions in GitHub:
 - Devin will not mirror the permissions of the user running a session with Devin, it will retain the permissions granted at the org-level.
 - Devin cannot create new repos in your GitHub account.
 
-## ❓GitHub Integration FAQs
+##GitHub Integration FAQs
 
----
+<AccordionGroup>
+  <Accordion title="Can I connect my Personal GitHub account to my organization’s Devin account?" icon="user">
+Yes, a user can choose to connect a GitHub Organization or Personal account to their organization's Devin account, but we recommend connecting the account that will have the relevant permissions for Devin to run sessions for the organization.
+  </Accordion>
 
-- **Q: Can I connect my Personal GitHub account to my organization’s Devin account?**
-    
-    Yes, a user can choose to connect a GitHub Organization or Personal account to their organization's Devin account, but we recommend connecting the account that will have the relevant permissions for Devin to run sessions for the organization.
-    
-- **Q: How does the GitHub app handle user authentication?**
-    
-    Only users authenticated with access/permissions to the organization that the GitHub integration was connected to can use it in their Devin runs. In other words, Devin(s) will only have access to a GitHub integration if they are launched by the people part of the organizations that installed that GitHub integration.
-    
-- **Q: How does Devin manage and rotate encryption keys?**
-    
-    Encryption keys are managed by AWS KMS and rotated periodically.
+ <Accordion title="How does the GitHub app handle user authentication?" icon="shield-halved">
+Only users authenticated with access/permissions to the organization that the GitHub integration was connected to can use it in their Devin runs. In other words, Devin(s) will only have access to a GitHub integration if they are launched by the people part of the organizations that installed that GitHub integration.
+  </Accordion>
+
+ <Accordion title="How does Devin manage and rotate encryption keys?" icon="binary">
+Encryption keys are managed by AWS KMS and rotated periodically.
+  </Accordion>
+
+</AccordionGroup>
