@@ -29,8 +29,10 @@
     {
       "name": "API Reference",
       "url": "api-reference"
-    }
+    },
   ],
+    "breadcrumbs": true
+}
   "navigation": [
     {
       "group": "Get Started",
