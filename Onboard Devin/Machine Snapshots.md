@@ -1,1 +1,61 @@
+## Quickstart: Your First Machine Snapshot
 
+To get started with Devin, we recommend creating one (or more) snapshots that allow Devin to easily run startup commands, clone repositories, set up environments, and more, so you don’t have to do it every time you start a new sessions.
+
+To create your first machine snapshot, start a new session:
+
+1. Ask Devin to clone a repo
+2. Prompt Devin to follow the README to install the dependencies and then build the repo
+3. Verify that the repo is built successfully
+    1. Make sure there are no stray changes (e.g. untracked changes in git) that could confuse Devin when starting future runs.
+    2. Although not required, you can go to "Use Devin's Machine" to open a shell on the dev box and verify the clean state directly.
+4. If Devin successfully built the repo, you can create a snapshot from this run. Remember that creating the snapshot will kill the session so only do this once the session is done.
+5. When creating the snapshot, you can add startup commands to pull the latest version from Git and install the latest dependencies.
+
+
+##What is a machine snapshot?
+
+Machine snapshots are ‘save’ states for Devin. After you take a snapshot, you can start from that machine state (with everything you’ve downloaded/installed) on any future Devin run.
+
+You can use machine snapshots to:
+
+- Perform one-time installation and setup and start new sessions from that point, every time
+- Resume from a previously ended session
+- Execute start up commands
+
+## How do I create a machine snapshot?
+
+1. Once your run has stopped, click the “Create machine snapshot” button in the bottom right corner of Devin’s Workspace. 
+    
+    This feature is only available when Devin is awaiting a response or after the session ends.
+    
+
+![Screenshot 2024-06-16 at 3.56.20 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/7aac4e92-b9bf-46f0-9c2c-7cd41f442756/187582f6-10d7-46e9-b0bd-0874b32528ee.png)
+
+1. Then, fill in your snapshot name, description and the startup commands you want to run each time the snapshot is selected. 
+    
+    The description is used to explain the state of the machine to future Devin (who has no memory of your previous run). Once submitted, the snapshot will generally take 15-30 minutes before becoming available. In some cases when your run has already ended a long time ago, your snapshot can actually become available immediately.
+    
+
+![Screenshot 2024-06-16 at 3.57.00 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/d1f0dc20-b088-4680-84f5-56e5d9c306e6/Screenshot_2024-06-16_at_3.57.00_PM.png)
+
+You’ll see the snapshot in the top right of a new Devin session as greyed out (pending) until it finishes and becomes available.
+
+*Default snapshot* is simply the default state that Devin regularly starts from.
+
+> Tip: While it’s possible to terminate a session at any point and then take a snapshot, it’s generally  better to wait until Devin no longer has any commands running before the snapshot. This way you can be sure you’re not capturing Devin’s machine state mid-operation!
+> 
+
+## How do I start from a machine snapshot?
+
+Before starting your Devin run, just choose a machine snapshot from the top right corner and you’re good to go! You can start from a snapshot as many times as you want.
+
+![Screenshot 2024-06-16 at 3.53.47 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/f7185795-32bb-477d-98b2-40b49f5cf493/Screenshot_2024-06-16_at_3.53.47_PM.png)
+
+![Screenshot 2024-06-16 at 3.53.23 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/5b934a7b-24b9-4456-839d-7a96a987384b/Screenshot_2024-06-16_at_3.53.23_PM.png)
+
+### Tips & Important Notes
+
+- **Devin won’t have memory of the original session.** You can either provide it in your input prompt or give additional context in your snapshot description!
+- If you’re working in an organization, everyone will be able to see the snapshots you and your teammates have created.
+- Devin’s performance can sometimes degrade as the chat log gets longer. If this happens, consider using snapshots as a way to ‘wipe’ the log but maintain the machine image progress. Just remember to give Devin all the necessary context when you start from the snapshot.
