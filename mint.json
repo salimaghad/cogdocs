@@ -23,7 +23,7 @@
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://cognition.ai"
   },
   "tabs": [
     {
@@ -38,54 +38,62 @@
       "url": "https://mintlify.com/docs"
     },
     {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
       "name": "Blog",
       "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "https://www.cognition.ai/blog"
     }
   ],
   "navigation": [
     {
       "group": "Get Started",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "get-started/devin-intro",
+        "get-started/quickstart",
+        "get-started/first-run"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Learn about Devin",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "learn-about-devin/prompting"
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Onboard Devin",
       "pages": [
-        "api-reference/introduction"
+        "onboard-devin/knowledge",
+        "onboard-devin/snapshots",
+        "onboard-devin/secrets"
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Collaborate with Devin",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "collaborate-with-devin/machine",
+        "collaborate-with-devin/browser",
+        "collaborate-with-devin/worklog"
       ]
-    }
+    },
+    {
+      "group": "Working with Teams",
+      "pages": [
+        "working-with-teams/multidevin",
+        "working-with-teams/playbooks-intro",
+        "working-with-teams/writing-playbooks",
+        "working-with-teams/using-playbooks",
+        "working-with-teams/integrations",
+        "working-with-teams/invited-team"
+      ]
+    },
+    {
+      "pages": [
+        "security",
+        "release-notes"
+      ]
+    },
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "x": "https://x.com/cognition_labs",
+    "linkedin": "https://www.linkedin.com/company/cognition-ai-labs/"
   }
 }
