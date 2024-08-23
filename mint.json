@@ -47,9 +47,9 @@
     {
       "group": "Get Started",
       "pages": [
-        "devin-intro",
-        "quickstart",
-        "first-run"
+        "Get Started/devin-intro",
+        "Get Started/quickstart",
+        "Get Started/first-run"
       ]
     },
     {
