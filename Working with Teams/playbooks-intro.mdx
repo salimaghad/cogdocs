@@ -1,1 +1,69 @@
+## What are Playbooks?
 
+### Playbooks easily shareable, reusable prompts
+
+A playbook is like a custom system prompt. It’s also like writing a program, without the rigid syntax. 
+
+Playbooks are also easily shareable and reusable, so once anyone succeeds with Devin, others can more easily replicate that success!
+
+As an example of what playbooks enable, you can:
+
+- send Devin a message describing a feature to build
+- share with Devin the relevant playbook (e.g. `quick_pr.devin.md`)
+
+And Devin will now more reliably **follow best practices for contributing to your company’s repository** —  e.g. remembering what to include in the PR description, reading PR review comments from coworkers, and sharing the PR link every time new changes are made.
+
+![Screenshot 2024-06-10 at 11.30.17 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/8ac101c4-c485-4286-9180-1a5de8a739a0/Screenshot_2024-06-10_at_11.30.17_AM.png)
+
+
+### Playbooks can immediately unlock Devin’s ability to contribute in a wide range of areas, but require some upfront investment to write
+
+In the future Devin will create and maintain playbooks all by itself, learning from its past work and its observations of your company’s codebase over time. 
+
+We recommend using Playbooks when:
+
+- You or your teammates will reuse the prompt or instructions on multiple sessions.
+- The use case may be relevant to others — in your organization or within the Devin user community.
+
+## Getting Started with Playbooks
+
+Consider writing your first playbook with a simple multi-step task you want Devin to tackle.
+
+1. Create a document that outlines (1) the outcome you want Devin to achieve, and (2) the steps required to get there. 
+2. **Optional:** Add a **Procedure** section.
+    1. The Procedure should span the  entire scope of the task.
+    2. Include at least one step for setup, the actual task, and delivery.
+    3. Aim to make the steps **Mutually Exclusive** and **Collectively Exhaustive**
+3. **Optional**: Add sections like **Specification**, **Advice**, **Forbidden Actions,** etc.
+    1. **Specification**: Describe postconditions - what should be true after Devin is done?
+    2. **Advice**: Include tips to correct Devin’s priors.
+4. **Optional**: Add a section describing what’s required from the user.
+5. Save the file with the file extension `.devin.md` and drag-and-drop it in the web app when starting a Devin Session.
+    1. Alternatively, you can create the playbook directly in the web app by clicking “Create a new Playbook”
+        
+        ![Screenshot 2024-05-31 at 6.33.28 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/664e5a3c-f4cd-4e18-afea-90f2af9c7bf5/Screenshot_2024-05-31_at_6.33.28_PM.png)
+        
+
+### **Tips**
+
+- Pick a task that you’re an expert in so that you can give good advice.
+- You’ve successfully attached a playbook to a sessions if you see an blue pill appear, along with an inline component for editing the playbook before starting your session
+
+![Screenshot 2024-07-30 at 10.46.08 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/9b2404d2-f34c-4bef-9c75-962adae848e9/Screenshot_2024-07-30_at_10.46.08_PM.png)
+
+- You may need to iterate on the playbook a few times to cover all the mistakes Devin tends to make.
+- Devin can follow both high level instructions (e.g. “first set up a new conda environment”)  and explicit low level instructions (e.g. “To create a PR from the command line, use this command: echo -e "..." > `PR_DESCRIPTION.md` && gh pr create --body-file=`PR_DESCRIPTION.md`”)
+
+### **Example Playbook (see below for more examples)**
+
+```
+Playbook: Checking cognition's follower count on twitter
+
+## Procedure
+1. Go to https://twitter.com/cognition_labs
+2. Take a screenshot
+3. Check the date
+4. Report the number of followers, date, and the screenshot to the user
+```
+
+Link: https://gist.github.com/stevenhao/f8232df154fdd45f5339d65440d957d0
