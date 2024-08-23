@@ -1,17 +1,17 @@
 - Get Started:
-  - Introduction: get-started/devin-intro.md
-  - Quickstart: get-started/quickstart.md
-  - Run: get-started/first-run.md
+  - Introduction: get-started/devin-intro.mdx
+  - Quickstart: get-started/quickstart.mdx
+  - Run: get-started/first-run.mdx
 - Learn about Devin:
-  - Prompts: learn-about-devin/prompting.md
+  - Prompts: learn-about-devin/prompting.mdx
 - Onboard Devin:
-  - Knowledge: onboard-devin/knowledge.md
-  - Snapshots: onboard-devin/snapshots.md
-  - Secrets: onboard-devin/secrets.md
+  - Knowledge: onboard-devin/knowledge.mdx
+  - Snapshots: onboard-devin/snapshots.mdx
+  - Secrets: onboard-devin/secrets.mdx
 - Collaborate with Devin:
-  - Machine: collaborate-with-devin/machine.md
-  - Browser: collaborate-with-devin/browser.md
-  - Worklog: collaborate-with-devin/worklog.md
+  - Machine: collaborate-with-devin/machine.mdx
+  - Browser: collaborate-with-devin/browser.mdx
+  - Worklog: collaborate-with-devin/worklog.mdx
 - Working with Teams:
   - MultiDevin:
-  - 
+  - Play
