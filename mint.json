@@ -74,6 +74,14 @@
         "Working with Teams/invite-team"
       ]
     },
+     {
+      "group": "Integrations",
+      "pages": [
+        "Integrations/devin-tools",
+        "Integrations/github",
+        "Integrations/slack"
+      ]
+    },
     {
       "group": "Other",
       "pages": [
