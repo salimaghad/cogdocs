@@ -79,58 +79,13 @@ We recommend setting up an specific channel (e.g. **#devin-runs**) to keep all o
 
 ### Permissions
 
-| Permission                         | Description                                                       | Rationale              
+| Permission                         | Description                                                       | Rationale  
 | ---------------------------------- | ----------------------------------------------------------------- |  ------------------------------------------------|  
 | `chat:write, chat:write.customize` | Send messages as @Devin or using a customized username and avatar | Devin has to be able to respond to user requests |
-                     |
-
-
-
-The Devin Slackbot requires the following permissions
-
-- 
-    
-    
-    **Reason for request**: 
-    
-- `commands`:
-    
-    Add shortcuts and/or slash commands that people can use
-    
-    **Reason for request**: Devin might gain more interactive features in the future that will require different commands
-    
-- `files:read. files:write`:
-    
-    Upload, edit, and delete files as Devin
-    
-    **Reason for request**: Devin needs to ability to manage files in order to send and receive attachments to/from the user
-    
-- `channels:history, groups:history, im:history`:
-    
-    View messages and other content in channels, groups, and DMs that Devin is in
-    
-    **Reason for request**: Devin has to access historical messages when he is launched inside of a message thread in order to retrieve the previous messages in the thread as context
-    
-- `im:read`, `im:write`:
-    
-    Start direct messages with people and view basic information about direct messages that Devin has been added to
-    
-    **Reason for request**: Devin needs to be able to initiate DMs in order to send users notifications via Slack
-    
-- `reactions:write`:
-    
-    Add and edit emoji reactions
-    
-    **Reason for request**: Devin adds emojis to messages in order to mark runs as completed or failed
-    
-- `remote_files:read, remote_files:write`:
-    
-    View remote files added by the app in a workspace
-    
-    **Reason for request**: Devin needs to ability to manage remote files in order to send and receive attachments to/from the user
-    
-- `users:read, users:read.email`, `users.profile:read`:
-    
-    View people in a workspace as well as their emails and profiles
-    
-    **Reason for request**: Devin needs to be able to match Slack users with Devin users based on their email address
+| `commands` |     Add shortcuts and/or slash commands that people can use | Devin might gain more interactive features in the future that will require different commands |
+| `files:read. files:write` |  Upload, edit, and delete files as Devin | Devin needs to manage files in order to send and receive attachments to/from the user |
+| `channels:history, groups:history, im:history` | View messages and other content in channels, groups, and DMs that Devin is in | Devin has to access historical messages when he is launched inside of a message thread in order to retrieve the previous messages in the thread as context |
+| `im:read`, `im:write` | Start direct messages with people and view basic information about direct messages that Devin has been added to | Devin needs to be able to initiate DMs in order to send users notifications via Slack |
+| `reactions:write` | Add and edit emoji reactions | Devin adds emojis to messages in order to mark runs as completed or failed |
+| `remote_files:read, remote_files:write` | View remote files added by the app in a workspace| Devin needs to  manage remote files in order to send and receive attachments to/from the user |
+| `users:read, users:read.email`, `users.profile:read` | View people in a workspace as well as their emails and profiles | Devin needs to be able to match Slack users with Devin users based on their email address |
