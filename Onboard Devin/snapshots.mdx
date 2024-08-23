@@ -9,13 +9,18 @@ To get started with Devin, we recommend creating one (or more) snapshots that al
 
 To create your first machine snapshot, start a new session:
 
-1. Ask Devin to clone a repo
-2. Prompt Devin to follow the README to install the dependencies and then build the repo
-3. Verify that the repo is built successfully
-    1. Make sure there are no stray changes (e.g. untracked changes in git) that could confuse Devin when starting future runs.
-    2. Although not required, you can go to "Use Devin's Machine" to open a shell on the dev box and verify the clean state directly.
-4. If Devin successfully built the repo, you can create a snapshot from this run. Remember that creating the snapshot will kill the session so only do this once the session is done.
-5. When creating the snapshot, you can add startup commands to pull the latest version from Git and install the latest dependencies.
+1. Ask Devin to clone a repo and install the dependencies
+```
+Hey Devin, set up {my repo} and get it running. Follow the README to install the dependencies.
+```
+
+2. Verify that the repo is built successfully
+    1. Make sure there are no stray changes (e.g. untracked changes in git) that could confuse Devin.
+    2. [Optional] You can go to `Use Devin's Machine` to open a shell on the dev box and verify the clean state.
+
+3. If Devin successfully built the repo, you can **create a snapshot** from this run. Remember that creating the snapshot will terminate the session so only do this once the session is done.
+
+4. When creating the snapshot, you can add startup commands to pull the latest version from Git and install the latest dependencies.
 
 
 ## What is a machine snapshot?
@@ -63,6 +68,6 @@ Before starting your Devin run, just choose a machine snapshot from the top righ
 
 ### Tips & Important Notes
 
-- **Devin won’t have memory of the original session.** You can either provide it in your input prompt or give additional context in your snapshot description!
+- Devin won’t have memory of the original session. You can either provide it in your input prompt or give additional context in your snapshot description!
 - If you’re working in an organization, everyone will be able to see the snapshots you and your teammates have created.
 - Devin’s performance can sometimes degrade as the chat log gets longer. If this happens, consider using snapshots as a way to ‘wipe’ the log but maintain the machine image progress. Just remember to give Devin all the necessary context when you start from the snapshot.
