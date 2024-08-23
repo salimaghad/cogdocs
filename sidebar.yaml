@@ -13,5 +13,11 @@
   - Browser: collaborate-with-devin/browser.mdx
   - Worklog: collaborate-with-devin/worklog.mdx
 - Working with Teams:
-  - MultiDevin:
-  - Play
+  - MultiDevin: working-with-teams/multidevin.mdx
+  - Playbooks Intro: working-with-teams/playbooks-intro.mdx
+  - Writing Playbooks: working-with-teams/writing-playbooks.mdx
+  - Using Playbooks: working-with-teams/using-playbooks.mdx
+  - Integrations: working-with-teams/integrations.mdx
+  - Invite: working-with-teams/invite-team.mdx
+- Security
+- Release Notes
