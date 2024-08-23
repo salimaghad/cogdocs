@@ -1,1 +1,41 @@
+Have you ever wanted to work ***with*** Devin?
 
+You are now able to use and interact with editor and shell! This let's you read and edit files on Devin’s machine just like if you were working with Devin in VSCode. You can also open up a terminal, which means you have **full access** to Devin’s machine.
+
+## How to access Devin’s Machine
+
+After you kick off a run and Devin initializes its machine, click the three dots on the upper right corner and select **Use Devin’s Machine**.
+
+![Screenshot 2024-06-10 at 12.38.10 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/39276f24-8f4f-4ae3-9516-5b64dcde27a8/Screenshot_2024-06-10_at_12.38.10_AM.png)
+
+Once selected, you’ll launch a new VSCode session like this:
+
+![Screenshot 2024-05-07 at 10.13.21 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/b62c1fb8-d9e3-4d89-80ce-bc6b52a96575/Screenshot_2024-05-07_at_10.13.21_AM.png)
+
+We recommend clicking on “**Yes, I trust the authors**” and then you can view Devin’s code:
+
+![Screenshot 2024-05-07 at 10.13.46 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/879a3bf4-c6b3-46da-813e-0cae6d6cd08d/Screenshot_2024-05-07_at_10.13.46_AM.png)
+
+## Terminal
+
+You can also use VSCode to open up a terminal! To do this simply use the shortcut `Ctrl-``  or, on a Mac, use the shortcut `Cmd-j`. This will open up a terminal where you can now run any commands you like or test Devin’s code.
+
+![Screenshot 2024-05-07 at 10.19.56 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/edbe7809-fc7b-4e77-a932-558f4ba701ae/Screenshot_2024-05-07_at_10.19.56_AM.png)
+
+## Tips
+
+### View file diffs
+
+You can view current and a log of Devin’s edits under three dots menu > **View Global File Diff.** This section will show all files modified by Devin, with the temporary exception of some edits made via the shell.
+
+### Keep Devin in the loop
+
+If you do edit files or otherwise make changes to Devin’s machine state, make sure to tell Devin what you changed! Otherwise Devin might get confused — imagine if your code mysteriously changed while you were in the middle of working on it. 
+
+### Edit while it’s running
+
+You can only use and interact with Devin’s machine while the sessions is running. Once the session is terminated it’s no longer available.
+
+### Avoid sharing
+
+Do ***not*** share the link with others since this will leak your files that you’ve given to Devin.
