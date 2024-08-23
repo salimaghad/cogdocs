@@ -1,1 +1,100 @@
+## **Working with Secrets**
 
+Every now and then we may want Devin to access a protected web resource. While Devin is working, you can provide Devin with credentials (API keys, logins, etc.) within the current conversation, like so…
+
+![Screenshot 2024-04-18 at 9.29.16 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/226994aa-cb32-4414-9f2b-3a4b7965a450/Screenshot_2024-04-18_at_9.29.16_PM.png)
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/1183e1af-2a7e-4cdc-a352-543b9cac45b6/Untitled.png)
+
+## Persisted Secrets
+
+However, other times you might prefer to store secrets that **persist** to future sessions. 
+
+This is now possible in the [Settings > Secrets](http://preview.devin.ai/settings/secrets)! Note that any secrets you share here will be usable by Devin in all future Devin sessions within your organization.  ****All secrets are encrypted at rest. **New secrets are only available to Devin in sessions created *after* you added the secret.**
+
+There are 3 types of secrets available:
+
+1. **Plain Text**
+    
+    This is most suitable for secrets with a single value, such as an API key or an SSH key. Just paste in the value directly.
+    
+2. **Key-Value**
+    
+    Use this for more multi-variable logins. For instance, to sign into Amazon, Devin needs both an email and a password to sign in successfully. Add the field name under ‘Key’ (e.g. email, username, password, etc.) and add the input Devin should use under ‘Value’. ‘Value’ is always masked and cannot be viewed any other user in your organization.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/ee505763-2520-4658-a0de-5a085d561564/Untitled.png)
+
+3. **Site Cookies**
+    
+    In addition to Key-Value and Plain Text secrets, you can also add site cookies. **Cookies “hold” your authenticated state**; if you are logged into some site, then giving Devin your cookies for that site will make it so that Devin is automatically logged in for the same site.
+    
+    We support both key-value secrets and cookies because cookies can sometimes be insufficient by themselves. For example, on Amazon, Devin may be logged into the site while shopping / adding to cart, but Amazon might require an additional layer of password confirmation when it comes time to check out.
+    
+    With this new capability, Devin will have access to any sites you provided valid cookies for. ⚠️ **Note that this is a beta feature and may not work for some sites,** but we’ve found that it works for Amazon, Resy and DoorDash, and are excited to explore together what else this enables!
+    
+
+Here is an example of cookies working on Resy to book a restaurant reservation (link to session [here](https://preview.devin.ai/devin/dd19651a6b0745388a28d0f6f45d38b6)): 
+
+[Screen Recording 2024-04-23 at 8.05.38 PM.mov](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/6d48746a-51d4-46f6-a21c-42ee93afa8b2/Screen_Recording_2024-04-23_at_8.05.38_PM.mov)
+
+Notice how with cookies, when Devin navigates to the Resy website, Devin is already logged in to the user’s account. As a result, when Devin goes to make the reservation, the user’s card details are already filled out!
+
+## **Adding a New Site Cookie**
+
+1. Log in as you normally would to the account you'd like to share with Devin. This will generate cookie(s)!
+2. Get the cookie(s) from the browser store:
+    - 🟢 Easier Option
+        - Download the browser extension [Share your cookies](https://chromewebstore.google.com/detail/share-your-cookies/poijkganimmndbhghgkmnfgpiejmlpke)
+        - As shown in the video, (1) export the cookie using the extension (2) test that importing the cookie in another chrome profile works - meaning you become logged in after importing the cookie (3) add the cookie to the [Secrets page](https://preview.devin.ai/secrets)
+            
+            [Screen Recording 2024-05-13 at 1.06.05 PM.mov](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/85600818-7777-471b-839e-47176dc92716/Screen_Recording_2024-05-13_at_1.06.05_PM.mov)
+            
+    - 🔺 Harder Option
+        - Manually retrieve the cookie(s) with the browser Developer Console
+        - Format the cookies
+            - The expected format for the cookie(s) value is:
+                - Each cookie is a JSON object with the following form:
+                    
+                    ```
+                    {
+                      "domain":".google.com",
+                      "expirationDate":1728760369.08137,
+                      "hostOnly":false,
+                      "httpOnly":false,
+                      "name":"SEARCH_SAMESITE",
+                      "path":"/",
+                      "sameSite":"strict",
+                      "Secure":false,
+                      "Session":false,
+                      "storeId":"0",
+                      "value":"CgQI9JoB"
+                    }
+                    ```
+                    
+                - If there are multiple cookies, they should separated with ;
+        - Cookies should be base64 encoded
+            - Example of final format for the above cookie:
+                
+                ```
+                ewogICJkb21haW4iOiIuZ29vZ2xlLmNvbSIsCiAgImV4cGlyYXRpb25EYXRlIjoxNzI4NzYwMzY5LjA4MTM3LAogICJob3N0T25seSI6ZmFsc2UsCiAgImh0dHBPbmx5IjpmYWxzZSwKICAibmFtZSI6IlNFQVJDSF9TQU1FU0lURSIsCiAgInBhdGgiOiIvIiwKICAic2FtZVNpdGUiOiJzdHJpY3QiLAogICJTZWN1cmUiOmZhbHNlLAogICJTZXNzaW9uIjpmYWxzZSwKICAic3RvcmVJZCI6IjAiLAogICJ2YWx1ZSI6IkNnUUk5Sm9CIgp9
+                ```
+                
+        - Add the formatted base64 value in the [Secrets page](http://preview.devin.ai/settings/secrets)
+3. When using cookies, Devin should find that it’s already logged in when it navigates to the site(s) that you provided cookies for (**note however that this is a beta feature, and may not work for some sites)**
+    - Tell Devin through the chat something like: “**navigate to <WEBSITE> directly - you should already be logged in, but let me know if not”.** In the future, Devin will realize this itself, but currently it might not realize and ask you for credentials, unless you send this message!
+    
+
+## One-Time Password
+
+Devin can now handle two-factor authentication (2FA) using a one-time password (OTP). To do this, you’ll need to give Devin the information provided when setting up 2FA on the specific application: 
+
+1. Access the account where 2FA is enabled that you want to give Devin access to.
+2. Go to the account security settings and look for an option to regenerate or view the QR code. This may be called Set up or Replace Authenticator.
+3. If the application allows, select the option to view the QR code. 
+4. Once the QR code is displayed on your screen, take a screenshot to convert it into a data string using a tool like https://webqr.com/.
+5. Paste the generated data string into Devin’s Secrets.
+
+**💡 Tips**
+
+- Some applications may not allow you to view the existing QR code once 2FA is enabled. In such cases, regenerating the QR code is the only option.
+- Always save any new backup codes provided during the process in a secure location.
