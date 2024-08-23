@@ -1,1 +1,27 @@
+## What is Knowledge?
+
+**Knowledge** is a collection of tips, advice, and instructions that Devin can reference in all runs. You can continually add to Devin’s bank of knowledge over time, and Devin will automatically recall relevant knowledge as necessary.
+
+## How do I create Knowledge?
+
+Navigate to the **Knowledge** tab in the **Settings** page, and click “Add knowledge” in the top right.
+
+![Screenshot 2024-06-10 at 1.00.05 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/f93ec880-4a30-4f2a-a95f-923954cba2b0/Screenshot_2024-06-10_at_1.00.05_AM.png)
+
+Your **Trigger Description** will be what Devin uses to pull in the relevant Knowledge. This can be a simple phrase, sentence, or a comma separated group of relevant words. All knowledge requires a trigger description.
+
+**Content** should be a handful of sentences (at maximum) with relevant information.
+
+## What belongs in Knowledge?
+
+Knowledge is best used as ‘organization memory’. Include the aspects of your prompts or playbooks you find yourself repeating regularly, or instructions on common workflows or capabilities Devin needs to navigate your use cases/codebases. 
+
+Examples include common bugs and their associated solutions, code conformance practices, deployment workflows, testing workflows, how to interact with proprietary tools, etc. 
+
+## Tips and Tricks
+
+1. Create specific knowledge that is targeted at one workflow or action. Devin will read the entire knowledge contents, so keep it all relevant and up-to-date!
+    - Split up your knowledge into smaller ones where possible. Don’t worry about overdoing it — Devin is capable of accessing multiple knowledge “items” at once.
+2. Make a habit of adding repeated solutions or workflows into **Knowledge**. These can be shared across your organization, and will continually improve Devin for your team as more get added.
+3. Devin retrieves knowledge during the relevant step, not all at once or all at the beginning. Be sure to make your retrieval trigger highly relevant to the contents.
 
