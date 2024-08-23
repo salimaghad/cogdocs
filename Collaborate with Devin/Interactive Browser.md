@@ -1,1 +1,5 @@
+Interactive Browser allows users to directly use Devin’s browser. 
 
+This feature is especially helpful for browser tasks where Devin may require assistance, such as completing CAPTCHAs, multi-factor authentication steps and more. 
+
+![Screenshot 2024-05-29 at 2.11.56 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/0c8a8503-4b01-49b0-bc7b-4a12da588f20/Screenshot_2024-05-29_at_2.11.56_AM.png)
