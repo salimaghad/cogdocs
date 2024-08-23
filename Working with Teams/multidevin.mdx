@@ -1,1 +1,88 @@
+# MultiDevin
 
+## What is MultiDevin? How does it work?
+
+<aside>
+MultiDevin is currently only available to Enterprise users
+
+</aside>
+
+MultiDevin is a version of Devin that constitutes 1 “manager” Devin and up to 10 “worker” Devins. The manager Devin creates the worker Devins, distributes a task to each worker Devin, then merges the changes from all *successful* worker Devins into one branch or pull request. 
+
+### Reasons to use MultiDevin
+
+- 🏎️ **Speed:** Worker Devins run in parallel.
+- 💪 **Reliability:** Each Devin is given a much smaller task to work on, so is much more likely to complete it successfully.
+- 💚 **Ease-of-use:** Manager Devin only incorporates successful worker runs into the final PR (+ you can define what “success” means!). Even if one or two workers fail, you still get a mergeable PR out of it.
+- 🧹 **Cleanliness:** MultiDevin creates one PR with several small fixes rather than one PR per fix. This becomes much easier to maintain and merge.
+
+### Situations to use MultiDevin
+
+MultiDevin is very good at getting through large backlogs of smaller tasks. Use MultiDevin when:
+
+- 🥷 Each task can be performed in isolation.
+- ⏳ Tasks can be performed incrementally, i.e. a regular ‘drip’ of PRs that each solve a small portion of the overall backlog.
+- 🟢 Devin has a high likelihood of solving the task without extensive prompting (e.g. lint errors, code smells, etc.)
+- 👍 Success can be easily defined (i.e. a warning no longer shows up/build passes).
+
+## How do I use MultiDevin?
+
+To select MultiDevin, click the dropdown besides “Running with” and choose “MultiDevin”.
+
+To create a new MultiDevin batch, click . Fill out the fields with the necessary task information, and drag + drop a .csv into the Task box. Click “Create MultiDevin” when you’re done.
+
+![Screenshot 2024-07-19 at 6.03.25 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/70bfc4e5-2eb4-4892-bac7-ceae66a93f86/6738dd1d-4a8b-439c-8820-2fb0e3968725.png)
+
+Finally, select the MultiDevin task you’d like to run, configure the number of MultiDevin workers (minimum 1, maximum 10), and hit “Enter” to start your MultiDevin run!
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/fca0cd84-7b3d-4852-aac8-0c068efc534c/Untitled.png)
+
+Each worker will be given one task to work on.
+
+You should now see the following MultiDevin UI:
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/be7f3f78-8fa6-4bbe-b2d1-8d83ecd2e253/Untitled.png)
+
+## MultiDevin fields
+
+```
+Title
+// Solely for your own reference
+
+Respository name
+// The repository that all tasks take place in. There can only be a single
+// `repository` per MultiDevin batch.
+
+Snapshot
+// The snapshot that will be used by manager and worker Devins.
+
+Playbook
+// The playbook that will be used by worker Devins. This will automatically 
+// update.
+
+Worker prompt
+// The prompt that is passed to every worker Devin. Include information on 
+// tackling the task (e.g. how to build the project, how to run lint)
+// Include your worker's success criteria (e.g. resolved error, build passing).
+
+Merge workers into a single PR?
+// If selected, manager Devin will only merge the successful worker Devins.
+// If not selected, manager Devin will simply spawn worker Devins then exit.
+
+=============================== Advanced Settings ===============================
+
+Worker timeout
+// The amount of time (in minutes) each worker Devin has before automatic timeout
+// failure. 
+// Defaults to 30 minutes.
+
+Manager 
+// The prompt that is passed to the manager Devin. This is typically used
+// for custom PR creation behavior, git behavior, merge behavior, or to ask for an
+// "overall" check/test prior to PR creation.
+// Defaults to "Once you have successfully merged all the fixes into your branch, 
+// you should create a PR and share the PR link with me."
+
+Root branch
+// The name of the branch that the PR is created into.
+```
