@@ -3,7 +3,7 @@ title: "MultiDevin"
 description: "Let Devin create other Devins to delegate and accelerate work"
 ---
 
-## What is MultiDevin? How does it work?
+## What is MultiDevin?
 
 MultiDevin is a version of Devin that constitutes 1 “manager” Devin and up to 10 “worker” Devins. The manager Devin creates the worker Devins, distributes a task to each worker Devin, then merges the changes from all *successful* worker Devins into one branch or pull request. 
 
@@ -14,7 +14,7 @@ MultiDevin is a version of Devin that constitutes 1 “manager” Devin and up t
 - 💚 **Ease-of-use:** Manager Devin only incorporates successful worker runs into the final PR (+ you can define what “success” means!). Even if one or two workers fail, you still get a mergeable PR out of it.
 - 🧹 **Cleanliness:** MultiDevin creates one PR with several small fixes rather than one PR per fix. This becomes much easier to maintain and merge.
 
-### Situations to use MultiDevin
+### When to use MultiDevin
 
 MultiDevin is very good at getting through large backlogs of smaller tasks. Use MultiDevin when:
 
@@ -23,7 +23,7 @@ MultiDevin is very good at getting through large backlogs of smaller tasks. Use 
 - 🟢 Devin has a high likelihood of solving the task without extensive prompting (e.g. lint errors, code smells, etc.)
 - 👍 Success can be easily defined (i.e. a warning no longer shows up/build passes).
 
-## How do I use MultiDevin?
+## Kick off a MultiDevin run
 
 To select MultiDevin, click the dropdown besides “Running with” and choose “MultiDevin”.
 
@@ -41,7 +41,7 @@ You should now see the following MultiDevin UI:
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/be7f3f78-8fa6-4bbe-b2d1-8d83ecd2e253/Untitled.png)
 
-## MultiDevin fields
+## MultiDevin fields
 
 ```
 Title
