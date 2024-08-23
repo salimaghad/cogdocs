@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Cognition Docs",
   "logo": {
     "dark": "/logo/cognition_dark.png",
     "light": "/logo/cognition_light.png"
@@ -18,7 +18,7 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "mailto:support@cognition.ai"
     }
   ],
   "topbarCtaButton": {
