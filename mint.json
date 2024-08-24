@@ -36,23 +36,23 @@
       {
       "group": "Get Started",
       "pages": [
-        "Get%20Started/devin-intro",
-        "Get%20Started/quickstart",
-        "Get%20Started/first-run"
+        "Get_Started/devin-intro",
+        "Get_Started/quickstart",
+        "Get_Started/first-run"
       ]
     },
     {
       "group": "Learn about Devin",
       "pages": [
-        "Learn%20about%20Devin/prompting"
+        "Learn_about_Devin/prompting"
       ]
     },
     {
       "group": "Onboard Devin",
       "pages": [
-        "Onboard%20Devin/knowledge",
-        "Onboard%20Devin/snapshots",
-        "Onboard%20Devin/secrets"
+        "Onboard_Devin/knowledge",
+        "Onboard_Devin/snapshots",
+        "Onboard_Devin/secrets"
       ]
     },
     {
@@ -66,11 +66,11 @@
     {
       "group": "Working with Teams",
       "pages": [
-        "Working%20with%20Teams/multidevin",
-        "Working%20with%20Teams/playbooks-intro",
-        "Working%20with%20Teams/writing-playbooks",
-        "Working%20with%20Teams/using-playbooks",
-        "Working%20with%20Teams/invite-team"
+        "Working_with_Teams/multidevin",
+        "Working_with_Teams/playbooks-intro",
+        "Working_with_Teams/writing-playbooks",
+        "Working_with_Teams/using-playbooks",
+        "Working_with_Teams/invite-team"
       ]
     },
     {
