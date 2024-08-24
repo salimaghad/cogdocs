@@ -34,7 +34,7 @@
   "breadcrumbs": true,
   "navigation": [
       {
-      "group": "Get Started",
+      "group": "Get%20Started",
       "pages": [
         "Get Started/devin-intro",
         "Get Started/quickstart",
@@ -42,13 +42,13 @@
       ]
     },
     {
-      "group": "Learn about Devin",
+      "group": "Learn%20about%20Devin",
       "pages": [
         "Learn about Devin/prompting"
       ]
     },
     {
-      "group": "Onboard Devin",
+      "group": "Onboard%20Devin",
       "pages": [
         "Onboard Devin/knowledge",
         "Onboard Devin/snapshots",
@@ -56,7 +56,7 @@
       ]
     },
     {
-      "group": "Collaborate with Devin",
+      "group": "Collaborate%20with%20Devin",
       "pages": [
         "Collaborate with Devin/machine",
         "Collaborate with Devin/browser",
@@ -64,7 +64,7 @@
       ]
     },
     {
-      "group": "Working with Teams",
+      "group": "Working%20with%20Teams",
       "pages": [
         "Working with Teams/multidevin",
         "Working with Teams/playbooks-intro",
