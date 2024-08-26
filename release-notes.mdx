@@ -3,4 +3,116 @@ title: "Release Notes"
 icon: 'megaphone'
 ---
 
+## July 15, 2024
 
+## June 30, 2024
+
+## May 29, 2024
+
+## May 13, 2024
+
+### 📸 Machine Snapshot Startup Commands
+
+For a given machine snapshot, you can now **set a list of startup commands that will be run at the beginning of every run**. Some details:
+
+- The commands are run from `~`
+- The commands run in sequence (so having `cd dir` and then `ls` will do `ls` from `dir`)
+- Each command is given a 2 minute timeout (so you can't run long-running servers with these commands)
+
+![Screenshot 2024-05-13 at 1.15.23 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/927cdd8c-29dc-4472-aaf2-36731ec4240f/Screenshot_2024-05-13_at_1.15.23_PM.png)
+
+![Screenshot 2024-05-13 at 1.18.41 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/bdf34be2-49e3-4d42-8983-6ae1ab24d715/Screenshot_2024-05-13_at_1.18.41_PM.png)
+
+Learn more about Machine Snapshots here: [Machine Snapshots Guide](https://www.notion.so/Machine-Snapshots-Guide-c987b1c5425642518f583b79acb44954?pvs=21) 
+
+### 🗒️ Command History
+
+![Screenshot 2024-05-13 at 1.56.17 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/8bbda795-5648-4eaa-a9da-0c8bc79dc7c6/Screenshot_2024-05-13_at_1.56.17_PM.png)
+
+With command history, you can easily see a list of all the commands that Devin ran, along with a preview of their outputs. 
+
+💡 **Tips**:
+
+- Click on a command to jump to the timestamp where Devin used the command.
+- Click the menu icon (appears when you hover over a command) to copy the full output.
+
+![Screenshot 2024-05-13 at 1.58.13 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/1116e4f7-bec6-4e52-83cb-b7dff2177c94/Screenshot_2024-05-13_at_1.58.13_PM.png)
+
+### 🔆 Keep Alive
+
+Keep Alive will keep a session alive indefinitely, and will count against Technical Preview users’ daily quota.  Manually terminating a session will override Keep Alive.
+
+Note that Keep Alive is useful for keeping any hosted services (devinapps.com links) alive, but is **not necessary** if Devin helps you deploy apps using third party services like Netlify, Firebase, Vercel, etc.
+
+![Screenshot 2024-05-13 at 2.12.09 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/e04ca0db-4c46-4a9d-b088-6678b3bd9e22/8a00a2c0-c4fe-46ec-96fc-6802a2000de0.png)
+
+![Screenshot 2024-05-13 at 2.12.12 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/50e4a34d-6259-4aa9-b90c-87e80ae3d25e/Screenshot_2024-05-13_at_2.12.12_PM.png)
+
+### 🚨 Browser Notifications
+
+![Screenshot 2024-05-13 at 8.28.09 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/743d6aec-be3b-404c-b255-4a43b22d489f/Screenshot_2024-05-13_at_8.28.09_PM.png)
+
+Get notified when Devin sends you a message. You can find this under Settings > Profile.
+
+### ⏸️  Pause Devin
+
+![Screenshot 2024-05-13 at 1.47.29 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/63e53c11-e23a-4e18-8a0a-9f7c77da826e/Screenshot_2024-05-13_at_1.47.29_PM.png)
+
+The new pause button is a shortcut and alternative to telling Devin to pause.
+
+### 👩‍💻 Open VS Code: Get full access to Devin’s machine
+
+![Screenshot 2024-05-13 at 1.48.55 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/e0fe1437-be3a-40d9-8e27-5de131dca1c6/Screenshot_2024-05-13_at_1.48.55_PM.png)
+
+Open VS Code lets you read and edit files on Devin’s machine just like if you were working with Devin in VSCode. You can also open up a terminal in Devin’s machine, which means you have **full access** to Devin’s machine.
+
+💡 **Tip:** Combine VSCode with our [Machine Snapshots feature](https://www.notion.so/Guide-to-Machine-Snapshots-8778fd6e1d2f452c8ad4ae98a2c18cb8?pvs=21) to set up everything Devin needs to be productive moving forward. One potential approach:
+
+- Tell Devin **“Run `pwd` and then pause. Do not do anything else.”**
+- **Open VSCode and open up a terminal** once Devin is paused
+- **Do any machine setup yourself** (install packages, configure repos, etc.)
+- **Create a snapshot.** Moving forward start sessions with this snapshot - all your future Devins will benefit from the setup you prepared!
+
+Learn more here: [Interacting with Devin’s Machine](https://www.notion.so/Interacting-with-Devin-s-Machine-bd89720db24e4f52bcd63489ff87e3fa?pvs=21) 
+
+### 🔑 Cookies + Persisted Secrets
+
+With Persisted Secrets, any secrets that you add in the Settings page will be usable by Devin in all future Devin sessions.
+
+Additionally, with site cookies, Devin will find that it's already logged in to sites you provide valid cookies for (no login required by Devin!). 
+
+- Note that **this is a beta feature** and may not work for some sites, but we’ve found that it works for Amazon and Resy, and are excited to explore together what else this enables!
+- Additionally, Devin may still ask for credentials. You’ll need to remind Devin to first check using its browser whether it’s already logged in!
+
+Learn more here: [[BETA] Enabling Devin to log into Accounts: Persisted Secrets + Site Cookies](https://www.notion.so/BETA-Enabling-Devin-to-log-into-Accounts-Persisted-Secrets-Site-Cookies-8d370a9e78d1433e94fbc8f5d7b09eaf?pvs=21) 
+
+### 🔒 [Organization Accounts] Unlist Sessions
+
+> This feature is only available to Organizations, not Technical Preview or Personal accounts
+> 
+
+My default, all new sessions are visible to your Team (aka Organization). To make a session private to you, click the menu icon (which appears on hover) next to your session name in the sidebar to find the Unlist session option.
+
+![Screenshot 2024-05-13 at 2.01.27 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/5c08823e-e488-43dd-866f-8418938824ff/Screenshot_2024-05-13_at_2.01.27_PM.png)
+
+### 💬 [Organization Accounts] Slack Integration
+
+> This feature is only available to Organizations, not Technical Preview or Personal accounts
+> 
+
+Once you’ve connected Slack to your organization, you’ll be able to initialize Devin directly just by tagging @Devin in Slack. Devin responds in-thread with updates and questions, just as in the regular chat interface. 
+
+You can also enable Slack notifications for specific runs and Devin will privately message you whenever there’s a status update. To do so, simply click the Slack icon at the top of any run you’d like to be notified for.
+
+![Untitled.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/fb9a8816-bc34-4654-b5c8-02a0a255c925/Untitled.png)
+
+**💡 Tips: Inline Slack keyboards**
+
+- “mute” → prevents Devin from sending further Slack messages.
+- “unmute” → reverses the above.
+- “(aside)” → causes Devin to ignore the message (useful for commenting on Devin’s run in-thread).
+- “EXIT” → ends the session.
+- snapshot:”<snapshot name>” → Use a particular snapshot with your run
+- playbook:<playbook-name> → Use a particular playbook with your run
+
+Learn more here: [Slack Integration Guide](https://www.notion.so/Slack-Integration-Guide-50c11122153d41f18e7bb31b40cf1fbd?pvs=21)
