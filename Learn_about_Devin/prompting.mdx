@@ -49,62 +49,44 @@ Devin needs guidance to make sure it knows what tasks to execute, and more impor
   </Accordion>
 
   <Accordion title="Create architecture diagram for repository" icon="diagram-subtask">
-    ```
-    **Playbook**: Create an architectural diagram of source code or a public GitHub repository
-    
-    ## Overview
-    
+    ```    
+    ## Overview    
     This playbook guides you through the process of creating an architectural diagram of a public GitHub repository or any source code using [C4-PlantUML](https://github.com/plantuml-stdlib/C4-PlantUML)
     
     ## What’s Needed From User
-    
     1. Provide link to your desired public github repository or a zip file containing your source code
     2. Provide instructions if you want the architecture diagram to be customized
     
     ## Procedure
-    
     1. Install dependencies
-    
     - Ensure that Java runtime is installed in your system
     - Install Graphviz using `sudo apt install graphviz`
-    
     2. Download PlantUML from the browser
-    
         - Navigate to [https://plantuml.com/download](https://plantuml.com/download) in your browser and download [PlantUML](https://github.com/plantuml/plantuml/releases/download/v1.2024.5/plantuml-1.2024.5.jar)
         - Ensure that it is included in your PATH
-    
     3. Extract the source code (if zip file is provided)
-    
     - Download the zip file provided by the user directly to the current working directory
     - Extract the source code from the zip file using `unzip <file_name.zip>` 
-    
     4. Setup the GitHub repository (if provided)
-    
         - Clone the GitHub repository provided by the user
         - Navigate to the correct directory
-    
     5. Analyze the functionality of different components in the app carefully
-    
         - Analyze the app directory
         - Understand the functionality of each component in the app very carefully
-    
     6. Generate the `.puml` file
         - Keep `Person` element outside `System_Boundary`
         - Make sure to add all the essential components and their relevant details in the diagram
         - Refer to [https://github.com/plantuml-stdlib/C4-PlantUML/blob/master/README.md](https://github.com/plantuml-stdlib/C4-PlantUML/blob/master/README.md) for detailed instructions
         - Include the following in the `.puml` file after `@startuml`
-    
+
     ```javascript
            !include  https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
            !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
     ```
     7. Generate the architecture diagram
-    
         - Generate the architecture diagram from the `.puml` file
         - Make sure that the command is run without errors
-    
     8. Share the final deliverables
-    
         - Share the architecture diagram with the user as an attachment
     
     ## Deliverables
