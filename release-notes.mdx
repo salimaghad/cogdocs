@@ -129,20 +129,18 @@ It can sometimes be more convenient to directly take actions for Devin, rather t
 
 We’re excited to share that you can now directly use Devin’s machine. The new “Use Devin’s Machine” button in the web interface opens VSCode in a new tab. Using VSCode, you can directly read and edit Devin’s files, as well as open up a terminal in Devin’s machine.
 
-![v2_vscode.gif](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/e714c2cc-f5d0-46dd-8805-a0f4e7319b25/v2_vscode.gif)
-
 ### <Icon icon="rotate-left" iconType="" /> Rollback
 
 You can now restore live sessions to a previous state. Rewind Devin’s memory and file system to any past moment in time and resume - useful for undoing wrong decisions, exploring alternative solutions, quickly iterating on playbooks/prompts, etc.
 
-![Screenshot 2024-06-27 at 3.52.52 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/caba1de4-7c79-4f82-a751-16d6ed1a0b1d/Screenshot_2024-06-27_at_3.52.52_PM.png)
+<Frame>
+    ![Devin](/images/rn_restore.png)
+</Frame>
 
 Restoring a checkpoint returns Devin to a previous point in time — Devin’s files and memory will be rolled back. **This is particularly useful…**
 
 - **When Devin made good progress, but then makes a mistake —** it can often be faster to revert Devin’s changes and let Devin retry with hints (or take over and complete the task yourself by [**using Devin’s machine**](https://www.cognition.ai/blog/june-24-product-update#use-devins-browser-editor-and-shell)), rather than working on top of Devin’s mistakes
 - **When iterating on a playbook or prompt —** try editing a playbook, and rolling back afterwards to quickly test whether the edit enables Devin to succeed reliably
-
-![Screenshot 2024-07-12 at 6.17.30 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/96766269-034e-420b-b687-e8ba9ce5c480/4efcdf17-8481-469f-96eb-e4a5f56eb32b.png)
 
 ### <Icon icon="comment-pen" iconType="" /> Live Playbook Editing
 
@@ -150,7 +148,9 @@ You can now edit playbooks while you’re running a session! If Devin isn’t re
 
 This will allow you to test and iterate to make the playbook more reliable, much faster!
 
-![Screenshot 2024-06-27 at 3.51.34 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/020bd793-3802-42a2-9e2b-8915ea94e9bf/Screenshot_2024-06-27_at_3.51.34_PM.png)
+<Frame>
+    ![Devin](/images/rn_editplaybook.png)
+</Frame>
 
 ### <Icon icon="pen" iconType="" /> Playbook Editing
 
@@ -160,7 +160,9 @@ Quickly edit a playbook before sending it to Devin. Selected playbooks show up i
 
 Inline and in-session playbook edits won’t be reflected in the Playbook Library unless you click the **“Update Playbook in library”** button. Alternatively, save your edits as new Playbook with the **“Create new Playbook in library”** button.
 
-![Screenshot 2024-07-05 at 12.59.16 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/6ab411f6-e1c3-4b22-80b7-728a803c3211/6cbbbe8c-5dc9-4fb1-b8a5-6249d68816f8.png)
+<Frame>
+    ![Devin](/images/rn_playbklib.png)
+</Frame>
 
 ### <Icon icon="ban" iconType="" /> Forbidden Actions Reliability
 
@@ -184,7 +186,9 @@ Explore how your teammates are using Playbooks in the new “Past runs” tab, a
 
 Devin is now aware of its own product features and improvements! Try asking Devin what it knows about the Devin web app, and it’ll explain its features and where to find them.
 
-![Screenshot 2024-07-04 at 11.06.33 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/b90c1513-1161-4ca5-bc78-0c0c4164b336/Screenshot_2024-07-04_at_11.06.33_PM.png)
+<Frame>
+    ![Devin](/images/rn_devinama.png)
+</Frame>
 
 ### <Icon icon="copy" iconType="solid" /> Start Duplicate Sessions
 
@@ -192,27 +196,36 @@ Quickly kick off 2+ similar sessions with the new **“Start duplicate session�
 
 We recommend kicking off 2+ Devin sessions for some tasks, to give Devin more chances to succeed!
 
-![Screenshot 2024-07-04 at 10.46.58 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/5f755d23-2ab1-4a66-9a3d-7cc7a0b78341/Screenshot_2024-07-04_at_10.46.58_PM.png)
+<Frame>
+    ![Devin](/images/rn_dupe.png)
+</Frame>
 
 ### <Icon icon="home" iconType="solid" /> Home Screen Upgrades & Shortcuts
 
 The new Devin home screen makes it faster to explore and select Playbooks and Snapshots. We also introduced **Shortcuts.** Select a snapshot and/or playbook and save them as a shortcut so that they’re quick to reuse!
 
-![Screenshot 2024-06-27 at 3.37.43 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/b2e84b47-921b-4ad1-9721-2b7f7dfba0c8/Screenshot_2024-06-27_at_3.37.43_PM.png)
-
-![Screenshot 2024-06-27 at 3.36.57 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/96289289-e8e4-4a3f-9b5e-0a416002d36f/Screenshot_2024-06-27_at_3.36.57_PM.png)
+<Frame>
+    ![Devin](/images/rn_newhome1.png)
+</Frame>
+<Frame>
+    ![Devin](/images/rn_newhome2.png)
+</Frame>
 
 ### <Icon icon="chart-solid" iconType="solid" /> PR Metrics Dashboard
 
 The PR metrics view aggregates all PRs made by Devin. The PR metrics view is available at https://preview.devin.ai/metrics!
 
-![Screenshot 2024-07-04 at 10.30.08 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/53c7581c-b984-43e2-b157-94463b0f3d07/Screenshot_2024-07-04_at_10.30.08_PM.png)
+<Frame>
+    ![Devin](/images/rn_prmetrics.png)
+</Frame>
 
 ### <Icon icon="filter" iconType="solid" /> Session Filtering
 
 Quickly filter all of your sessions by creator, status, playbook, date, etc.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4f925d22-65a4-47c3-9aed-b65e115aaef3/526b03e0-3f6e-4a93-914a-0ce1d0631270/Untitled.png)
+<Frame>
+    ![Devin](/images/rn_filter.png)
+</Frame>
 
 ## May 29, 2024
 
