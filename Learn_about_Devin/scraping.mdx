@@ -13,6 +13,14 @@ Devin is your expert web scraping assistant. It can build a web scraper or find 
 
 ### Example Prompts
 
+<AccordionGroup>
+  <Accordion title="Scrape emojis">
+  ```
+    Use this (https://github.com/muan/unicode-emoji-json) to write a function that converts a string like https://www.gstatic.com/android/keyboard/emojikitchen/20201001/u1f600/u1f600_u2615.png to "grinning_face_warm_beverage" by extracting the 2 emojis (u1f600, u2615) and converting them to actual emojis (use python for this) and then looking them up in the dictionary provided by the unicode emoji json library I linked. Throw an error if the emoji isn't found, including the codepoint in the error message. Then run the function on https://gist.githubusercontent.com/ryanseddon/0925ba915d4f865228ee3e6e0ddbe52c/raw/aa5cc2dbab3a9f3eaa1dc5d22dc1dc88d184dc4f/urls.txt and output a csv of the results.
+  ```
+ </Accordion>
+</AccordionGroup>
+
 ### Example Sessions
 
 Scrape emojis
