@@ -7,14 +7,6 @@ icon: 'comment'
 Devin needs guidance to make sure it knows what tasks to execute, and more importantly, any preference in how it should execute those tasks. If not specified, Devin will make its own judgment calls. 
 
 #### Prompt Library
-**Devin self-hosts Redash**
-
-```
-please self host redash server, connect a local sqlite database. add some dummy data and create an example query & dashboard.
-```
-
-Link to the session: [Self-host redash server](https://preview.devin.ai/sessions/675a54a158024b35a0feb8a159ed8273)
-
 
 <AccordionGroup>
   <Accordion title="Clone and set up repo" icon="copy">
@@ -120,6 +112,51 @@ Link to the session: [Self-host redash server](https://preview.devin.ai/sessions
     
     ## Advice and Pointers
     1. Ensure that the diagram is clear and easy to understand```
+  </Accordion>
+
+  <Accordion title="Devin self-hosts Redash" icon="burger">
+    ```
+    Hi Devin - I want to test out Redash. Please self host the Redash server, connect a local sqlite database. Add some dummy data and create an example query & dashboard.
+    ```
+  </Accordion>
+
+  <Accordion title="Place an order on DoorDash" icon="burger">
+    ```
+    ## Overview
+    The task is to order items, such as food, on DoorDash. You should access your DoorDash account, search the requested restaurant or item to order, select the items for the order, and confirm the order with the user who started the session.
+    
+    ## Procedure
+    1. Go to doordash.com 
+    2. Search for the food or restaurant requested by the user
+    3. If the user requested to order food
+    	3.1 Select the 3 most highly rated options within the delivery radius
+    	3.2 Share the food options and name of the restaurant with the user
+    	3.3 Ask them to confirm their selection
+    4. If the user requested to order from a specific restaurant
+    	4.1 Select the restaurant closest to the default delivery location
+    	4.2 If the restaurant requested is not within the delivery zone of the default delivery address, let the user know and ask for an alternative restaurant 
+    5. Before ordering, check that the restaurant is open and delivers to the default delivery address on the DoorDash account
+    6. Select the item or items requested by the users
+    7. If the item(s) asks for additional required selections, share the options with the user and ask them to decide
+    8. If the item(s) offers optional add-ons, share a screenshot of those options with the user and ask them if they’d like to add anything else to their order
+    9. Add the order to cart once the user confirmed the selection
+    10. By default, select a 20% tip
+    11. Go to cart and request confirmation on the ordered items, total price and delivery address from the user
+    12. Once the user confirms the price, order and address, complete the order
+    13. Once ordered, confirm the order has been placed with the user and share an estimated delivery time
+    
+    ## Specifications
+    - You must see the order confirmation page and have an estimated delivery time in order to complete the task
+    
+    ## Forbidden Actions
+    - You cannot complete the order without receiving explicit confirmation from the user
+    - You may not add items to the order that haven’t been requested by the user
+    - You may not modify or remove items from the order unless the user specifically requests it 
+    
+    ## Advice and Pointers
+    - You are already signed into your account on DoorDash (via cookies). If not, you can use the DoorDash cookies saved in Secrets.
+    - Do NOT ask clarifying questions until you perform at least one search for a relevant item.
+    ```
   </Accordion>
 
 </AccordionGroup>
