@@ -44,7 +44,13 @@
     {
       "group": "Learn about Devin",
       "pages": [
-        "Learn_about_Devin/prompting"
+        "Learn_about_Devin/prompting",
+        "Learn_about_Devin/webapps",
+        "Learn_about_Devin/microservices",
+        "Learn_about_Devin/migrations",
+        "Learn_about_Devin/refactors",
+        "Learn_about_Devin/upgrades",
+        "Learn_about_Devin/scraping"
       ]
     },
     {
